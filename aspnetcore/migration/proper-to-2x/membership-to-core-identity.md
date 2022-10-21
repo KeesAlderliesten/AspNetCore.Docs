@@ -141,7 +141,7 @@ SELECT aspnet_Users.UserId,
                                                      Sysutcdatetime())
          ELSE NULL
        END,
-       aspnet_Membership.IsLockedOut,
+       1,  -- LockedoutEnabled=True, so the user CAN be locked out
        /*
         AccessFailedAccount is used to track failed logins. This is stored in
         Membership in multiple columns. Setting to 0 arbitrarily.
